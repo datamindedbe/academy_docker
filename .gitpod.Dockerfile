@@ -20,11 +20,9 @@ COPY --chown=gitpod content/ /home/gitpod/docker-exercises
 # Set lock permissions for exercise 6
 # Copy solutions of exercises in hidden spots
 RUN mkdir /bin/abstergo && \
-    mkdir /bin/glados && \
     mkdir /bin/piper && \
     mkdir /bin/blizzard && \
     mkdir /bin/acme && \
-    mv /home/gitpod/docker-exercises/solutions/exercise_2 /bin/glados && \
     mv /home/gitpod/docker-exercises/solutions/exercise_3 /bin/acme && \
     mv /home/gitpod/docker-exercises/solutions/exercise_4 /bin/blizzard && \
     mv /home/gitpod/docker-exercises/solutions/exercise_5 /bin/piper && \
