@@ -1,12 +1,16 @@
-# Data Minded Academy - Introduction to Linux & Bash
-## Exercise 1 - Navigation in the system
+# Data Minded Academy - Containerization with Docker
+## Exercise 1 - Basics of the Docker CLI
 
-In this exercise you will have to use the classic navigation commands. The tasks are the following:
+In this exercise you will have to use the `docker` CLI to complete a few simple operation tasks. The tasks are the following:
 
-0. Check your current location with an appropriate tool.
-1. Run `source messthisthingup.sh` . This script will take at a random place of the machine and make your terminal a bit less self-explainable.
-2. Determine where you currently are.
-3. How many files are there? What are they?
-4. Run `ls -la`. What are those information about?
-5. Find your way back to the folder where you ran the first script.
-6. Run `source imback.sh` script to restore your terminal status.
+1. Run a container based on the `hello-world:latest` image. Name the container `my-hello-world-container`.
+2. Run three containers woth the same terminal (you will need the detached mode). Each one will be based on the following ever-running images:
+    * `nginx:1.21.5`
+    * `postgres:13.2-alpine` with the following environment variables:
+        * `POSTGRES_USER`: abcd
+        * `POSTGRES_DB`: abcd
+        * `POSTGRES_PASSWORD`: helloworld1234
+    * `grafana/grafana:latest` (create a port mapping from `3000` inside the container to the port of your choice outside)
+3. Once running, try to access the Grafana UI using the Remote Explorer menu in the Gitpod UI.
+4. List the available images and the existing containers (running or stopped).
+5. To free up some space, clean the Docker daemon from all containers and images (delete everything).
