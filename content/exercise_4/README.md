@@ -8,3 +8,7 @@ In this exercise, you are asked to containerized this simple application. To do 
 1. Write the Dockerfile that will define your Docker image, build, and run it to make sure everything is working as expected.
 
 2. Try to reflect on how to optimize your Dockerfile in terms of layers and caching capability. Make sure the dependencies installation isn't re-run at build tim everytime something change in `streamlit_app.py`.
+
+3. What's the current size of your Docker image? Can you do something to reduce this size?
+
+4. [Create an account in DockerHub](https://hub.docker.com/) and push the Streamlit app image to it. Delete the image you have locally and try to pull it from your Dockerhub account instead.
