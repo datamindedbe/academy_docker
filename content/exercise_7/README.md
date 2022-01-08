@@ -33,9 +33,4 @@ heroku container:push --app <your-heroku-app-name> web
 heroku container:release --app <your-heroku-app-name> web
 ```
 
-7. Find the application URL in the `Web URL` field when running:
-```
-heroku info <your-heroku-app-name>
-````
-
-8. Go to the given URL and watch your app running on the Web!
+7. You can browse your app at the URL: `https://<your-heroku-app-name>.herokuapp.com`. Congrats, you just deployed to the Web 🚀 ! 

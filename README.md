@@ -31,9 +31,10 @@ This exercise workshop can be run directly on Gitpod (without any need to provis
 |            | Path in Docker image |
 |------------|---------------|
 | Exercise 1 | `No solution required` |
-| Exercise 2 | `/bin/glados` |
+| Exercise 2 | `No solution required` |
 | Exercise 3 | `/bin/acme` |
 | Exercise 4 | `/bin/blizzard` |
 | Exercise 5 | `/bin/piper`|
-| Exercise 6 | `No solution required` |
-| Exercise 7 | `/bin/abstergo` |
+| Exercise 6 | `/bin/abstergo` |
+| Exercise 7 | `No solution required` |
+| Exercise 8 | `/bin/glados` |

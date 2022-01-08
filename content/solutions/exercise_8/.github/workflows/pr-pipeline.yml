@@ -15,12 +15,12 @@ jobs:
     - name: Build the Docker image
       run: |
         git_hash=$(git rev-parse --short HEAD)
-        docker build . -t docker.pkg.github.com/dernat71/example-cicd/my-example-fastapi-endpoint:$git_hash
+        docker build . -t project-api:$git_hash
 
     - name: Test the Docker image
       run: |
         git_hash=$(git rev-parse --short HEAD)
         docker run \
         --entrypoint=/bin/bash \
-        docker.pkg.github.com/dernat71/example-cicd/my-example-fastapi-endpoint:$git_hash \
+        project-api:$git_hash \
         ./script/test
