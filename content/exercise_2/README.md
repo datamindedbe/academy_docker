@@ -10,3 +10,5 @@ We will use the `devopsdockeruh/simple-web-service:ubuntu` Docker image. Once in
 2. Go inside the running container (using the right method) and use `tail -f ./text.log` to follow the logs. Every 10 seconds the clock will send you a “secret message”. What is the secret message? 
 
 3. Run another container from the the image `devopsdockeruh/simple-web-service:ubuntu` and use the second known method to connect inside a running container. You want another method than the one used in (2). What is the difference between those two approaches?
+
+4. Instead of going inside the running container to observe the `text.log` file, start a container with bind mounts so that the logs are created directly into this Gitpod filesystem (let's say in `/workspace/exercise_2`)

@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
 
 # This env var is used to force the 
 # rebuild of the Gitpod environment when needed
-ENV TRIGGER_REBUILD 1
+ENV TRIGGER_REBUILD 0
 
 USER root
 
@@ -26,7 +26,7 @@ RUN mkdir /bin/abstergo && \
     mv /home/gitpod/docker-exercises/solutions/exercise_3 /bin/acme && \
     mv /home/gitpod/docker-exercises/solutions/exercise_4 /bin/blizzard && \
     mv /home/gitpod/docker-exercises/solutions/exercise_5 /bin/piper && \
-    mv /home/gitpod/docker-exercises/solutions/exercise_7 /bin/abstergo && \
+    mv /home/gitpod/docker-exercises/solutions/exercise_6 /bin/abstergo && \
     rm -rf /home/gitpod/docker-exercises/solutions
 
 USER gitpod
