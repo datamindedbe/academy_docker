@@ -9,4 +9,4 @@ RUN pip install --upgrade pip && \
 
 COPY streamlit_app.py /app
 
-CMD ["streamlit", "run", "streamlit_app.py"]
+CMD streamlit run --server.port $PORT streamlit_app.py
