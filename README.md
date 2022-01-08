@@ -9,13 +9,14 @@ This repository is hosting the exercises provided to students in the context of 
 
 The following exercises are part of the repository:
 
-* **Exercise 1 (`exercise_1`) - Learn to move around**: In this exercise, students are asked to:
-    * Run the `source messthisthingup.sh` script. The latter will customize the $PS1 variable to hide all the information of the terminal and bring students somewhere random in the system.
-    * Determine where they currently are.
-    * Say how many files are there. What are they? (`ls -1 | wc -l`)
-    * Run `ls -la`. What are those information about?
-    * Find their way back to the folder where they ran the first script to run the `source imback.sh` script.
-
+* **Exercise 1** (`exercise_1`) - Basics of the Docker CLI
+* **Exercise 2** (`exercise_2`) - Interact with running containers (entrypoint overwrite, exec, bind mounts)
+* **Exercise 3** (`exercise_3`) - Use existing Docker images (YoutubeDL)
+* **Exercise 4** (`exercise_4`) - Write the Dockerfile of a simple Python application (Streamlit)
+* **Exercise 5** (`exercise_5`) - Write the Dockerfile of a simple Spring (Java) application
+* **Exercise 6** (`exercise_6`) - Run a frontend-backend stack
+* **Exercise 7** (`exercise_7`) - Deploy the Streamlit app to Heroku
+* **Exercise 8** (`exercise_8`) - CICD pipeline with Github Actions and deployment to Heroku
 
 ## 2. How-to run
 
