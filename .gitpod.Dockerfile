@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
 
 # This env var is used to force the 
 # rebuild of the Gitpod environment when needed
-ENV TRIGGER_REBUILD 0
+ENV TRIGGER_REBUILD 1
 
 USER root
 
@@ -11,7 +11,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/cache/apt/* && \
     rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/*
+    rm -rf /tmp/* && \
+    brew tap heroku/brew && \
+    brew install heroku
 
 # Copy exercices content into the image
 COPY --chown=gitpod content/ /home/gitpod/docker-exercises

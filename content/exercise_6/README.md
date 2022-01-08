@@ -1,10 +1,19 @@
 # Data Minded Academy - Containerization with Docker
-## Exercise 4 - Write the Dockerfile of a simple Spring (Java) application
+## Exercise 6 - Run a frontend-backend stack
 
-In this exercise, you are tasked to containerize a simple Spring (Java) application. The source code of the application is available in the subfolder `app` of the `exercise_5` folder. The instructions about how to setup the application should be straightforward and are written in the app's `README.md`.
+In this exercise, you are asked to reproduce the frontend-backend example showed in the video content of the course. You will the source code of the frontend and the backend in, respectively, the `example-fronted` and `example-backend` subfolders of this exercise. The apps' `README.md` will guide you on how to setup them.
 
-1. Write the Dockerfile that will define your Docker image, build, and run it to make sure everything is working as expected. Tips: use the [`openjdk:_tag_` image](https://hub.docker.com/_/openjdk?tab=description) as a base image. You’ve completed the exercise when you see a ‘Success’ message in your browser.
 
-2. Try to reflect on how to optimize your Dockerfile in terms of layers and caching capability. Is there something you can improve in this regard considering the required build process ?
+1. Write the Dockerfile of the frontend app. Build it, run it and check if you can access the frontend UI.
 
-3. [Create an account in DockerHub](https://hub.docker.com/) and push the Streamlit app image to it. Delete the image you have locally and try to pull it from your Dockerhub account.
+2. Write the Dockerfile of the backend app. Build it, run it and check if the server starts successfully.
+
+3. Make the `Test connection to backend` button of the frontend UI work successfully. To do so, you will need to set correctly the environment variables of the backend and frontend apps respectively (tips: refer to the note below about `localhost`).
+
+4. Write a `docker-compose.yml` file to run your frontend and backend together instead of running them in different terminals. Make sure everything works as expected when you run `docker-compose up`. 
+
+A few notes to consider:
+
+* We will NOT integrate a database in this exercise (like we did in videos).
+
+* `localhost` isn't accessible in the Gitpod environments. Instead, you will need to use the `gp` (for gitpod) CLI tool that will prompt you what is your current GitPod sandbox URL for a given port. For example, you can get the URL to your sandbox for port 8080 by running `gp url 8080`. That will return you something like `https://8080-amaranth-perch-k21ygfry.ws-eu25.gitpod.io`. You will need to use that address instead of `localhost:8080` in your Docker environment variables.

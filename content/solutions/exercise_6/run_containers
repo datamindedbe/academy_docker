@@ -1,21 +1,10 @@
 docker run \
 -it \
 -p 3000:3000 \
--e BACKEND_URL=http://localhost:8080 \
-hello_frontend
+-e BACKEND_URL=$(gp url 8080) \
+frontend
 
 docker run \
 -p 8080:8080 \
--e REQUEST_ORIGIN=http://localhost:3000 \
--e POSTGRES_HOST=host.docker.internal \
--e POSTGRES_USER=frontend_backend \
--e POSTGRES_DATABASE=frontend_backend_database \
--e POSTGRES_PASSWORD=helloworld1234 \
-hello_backend
-
-docker run \
--p 5432:5432 \
--e POSTGRES_USER=frontend_backend \
--e POSTGRES_DB=frontend_backend_database \
--e POSTGRES_PASSWORD=helloworld1234 \
-postgres:13.2-alpine
+-e REQUEST_ORIGIN=$(gp url 3000) \
+backend

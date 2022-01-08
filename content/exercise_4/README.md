@@ -1,7 +1,7 @@
 # Data Minded Academy - Containerization with Docker
 ## Exercise 4 - Write the Dockerfile of a simple Python application
 
-In this exercise, you are tasked to containerize a simple Streamlit app tracking the Uber rides in New York City. You can see the application running live [at this address](https://share.streamlit.io/streamlit/demo-uber-nyc-pickups/). The source code of the application is available in the subfolder `app` of the `exercise_4` folder. 
+In this exercise, you are asked to containerize a simple Streamlit app tracking the Uber rides in New York City. You can see the application running live [at this address](https://share.streamlit.io/streamlit/demo-uber-nyc-pickups/). The source code of the application is available in the subfolder `app` of the `exercise_4` folder. 
 
 You are asked to containerized this simple application. To do so, refer to the application's `README.md`. 
 
